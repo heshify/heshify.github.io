@@ -7,7 +7,8 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://heshify.github.io",
-  base: "/heshify.github.io/",
+  // base: "/heshify.github.io/",
+  base: "/",
   integrations: [sitemap(), mdx(), pagefind()],
   vite: {
     plugins: [tailwindcss()],
