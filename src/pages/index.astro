@@ -12,12 +12,12 @@ const blog = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const projects: CollectionEntry<"projects">[] = (
-  await getCollection("projects")
-)
-  .filter((project) => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+//const projects: CollectionEntry<"projects">[] = (
+//  await getCollection("projects")
+//)
+//  .filter((project) => !project.data.draft)
+//  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+//  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -29,27 +29,27 @@ const projects: CollectionEntry<"projects">[] = (
           <article class="space-y-4">
             <span>
               <p>
-                a software developer who writes about the projects I build and
-                the customizations I make to my Linux environment. This blog is
-                a collection of my notes, experiences, and insights from working
-                on various coding projects and tweaking my Linux setup.
+                Full-stack developer exploring systems, programming languages,
+                and backend architecture. Blogging my journey through code,
+                algorithms, and project experiments. Currently building a
+                real-time collaborative document editor in Go.
               </p>
             </span>
-            <span class="animate">
-              <!--  <p>-->
-              <!--    Micro still comes with everything great about Nano — full type-->
-              <!--    safety, a sitemap, an RSS feed, and Markdown + MDX support.-->
-              <!--    Styled with TailwindCSS and preconfigured with system, light,-->
-              <!--    and dark themes.-->
-              <!--  </p>-->
-              <p>
-                Visit
-                <Link href="https://github.com/trevortylerlee/astro-micro">
-                  Astro Micro on GitHub
-                </Link>
-                to fork the repository to get started.
-              </p>
-            </span>
+            <!--<span class="animate">-->
+            <!--    <p>-->
+            <!--      Micro still comes with everything great about Nano — full type-->
+            <!--      safety, a sitemap, an RSS feed, and Markdown + MDX support.-->
+            <!--      Styled with TailwindCSS and preconfigured with system, light,-->
+            <!--      and dark themes.-->
+            <!--    </p>-->
+            <!--  <p>-->
+            <!--    Visit-->
+            <!--    <Link href="https://github.com/trevortylerlee/astro-micro">-->
+            <!--      Astro Micro on GitHub-->
+            <!--    </Link>-->
+            <!--    to fork the repository to get started.-->
+            <!--  </p>-->
+            <!--</span>-->
           </article>
         </section>
 
@@ -69,21 +69,21 @@ const projects: CollectionEntry<"projects">[] = (
           </ul>
         </section>
 
-        <section class="animate space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="text-xl font-semibold">Recent projects</h2>
-            <Link href="/projects"> See all projects </Link>
-          </div>
-          <ul class="not-prose flex flex-col gap-4">
-            {
-              projects.map((project) => (
-                <li>
-                  <ArrowCard entry={project} />
-                </li>
-              ))
-            }
-          </ul>
-        </section>
+        <!--<section class="animate space-y-6">-->
+        <!--  <div class="flex flex-wrap items-center justify-between gap-y-2">-->
+        <!--    <h2 class="text-xl font-semibold">Recent projects</h2>-->
+        <!--    <Link href="/projects"> See all projects </Link>-->
+        <!--  </div>-->
+        <!--  <ul class="not-prose flex flex-col gap-4">-->
+        <!--    {-->
+        <!--      projects.map((project) => (-->
+        <!--        <li>-->
+        <!--          <ArrowCard entry={project} />-->
+        <!--        </li>-->
+        <!--      ))-->
+        <!--    }-->
+        <!--  </ul>-->
+        <!--</section>-->
 
         <section class="animate space-y-4">
           <h2 class="text-xl font-semibold">Let's Connect</h2>
