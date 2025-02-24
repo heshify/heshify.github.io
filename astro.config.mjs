@@ -9,7 +9,13 @@ export default defineConfig({
   site: "https://heshify.github.io",
   // base: "/heshify.github.io/",
   base: "/",
-  integrations: [sitemap(), mdx(), pagefind()],
+  integrations: [
+    sitemap({
+      filter: (page) => !page.startsWith("https://heshify.github.io/projects/"),
+    }),
+    mdx(),
+    pagefind(),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
