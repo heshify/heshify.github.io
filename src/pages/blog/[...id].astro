@@ -68,6 +68,16 @@ const { Content, headings } = await render(post);
           )
         }
       </div>
+      {
+        post.data.series && (
+          <a
+            href={`/series/${post.data.series}`}
+            class="w-fit border-b border-dashed py-1 text-sm opacity-70 transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+          >
+            Series: {post.data.series}
+          </a>
+        )
+      }
       <h1 class="animate text-3xl font-semibold">
         {post.data.title}
       </h1>
