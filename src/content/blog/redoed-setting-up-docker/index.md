@@ -130,3 +130,10 @@ This opens an interactive session inside our container and connects to PostgreSQ
 We’ve successfully containerized the Go server and PostgreSQL using Docker Compose. With everything set up, the next step is to connect the database to the server. Once that's done, we’ll write the CRUD APIs to interact with the data.
 
 See you in the next post!
+
+## References
+
+- https://docs.docker.com/desktop/setup/install/linux/archlinux/
+- https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/
+- https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/
+- https://docs.docker.com/compose/how-tos/startup-order/
