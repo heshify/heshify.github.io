@@ -13,17 +13,27 @@ const { entry } = Astro.props as {
 
 <a
   href={`/${entry.collection}/${entry.id}`}
-  class="not-prose group relative flex flex-nowrap rounded-lg border border-black/15 px-4 py-3 pr-10 transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+  class="not-prose group relative flex flex-nowrap gap-2 rounded-lg border border-black/15 px-4 py-3 pr-10 transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
 >
   <div class="flex flex-1 flex-col gap-1 truncate">
     <div class="font-semibold">
       {entry.data.title}
     </div>
+
     <span class="text-xs opacity-70">
       <FormattedDate date={entry.data.date} />
     </span>
     <div class="text-sm">
       {entry.data.description}
+    </div>
+    <div class="mt-1 flex gap-1">
+      {
+        entry.data.tags?.map((tag) => (
+          <span class="rounded-sm border border-black/15 px-1 py-0.5 text-xs opacity-70 transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white">
+            {tag}
+          </span>
+        ))
+      }
     </div>
   </div>
   <svg
