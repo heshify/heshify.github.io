@@ -50,15 +50,15 @@
   body {
     @apply font-sans antialiased;
     @apply flex flex-col;
-    /*@apply bg-neutral-100 dark:bg-[#380573] dark:bg-black;*/
-    @apply bg-neutral-100 dark:bg-[#231541];
+    @apply bg-neutral-100 dark:bg-black;
+    /*@apply bg-neutral-100 dark:bg-[#231541];*/
     @apply text-black/75 dark:text-white;
   }
 
   header {
     @apply fixed top-0 right-0 left-0 z-50 py-6;
-    /*@apply bg-neutral-100/75 dark:bg-neutral-900/75;*/
-    @apply bg-neutral-100 dark:bg-[#452981];
+    @apply bg-neutral-100/75 dark:bg-neutral-900/75;
+    /*@apply bg-neutral-100 dark:bg-[#452981];*/
     /*@apply saturate-200 backdrop-blur-xs;*/
   }
 
@@ -69,7 +69,8 @@
   h5,
   h6,
   h7 {
-    @apply text-[#F6706B];
+    /*@apply text-[#F6706B];*/
+    @apply text-[var(--clr-accent)];
   }
 
   main {
@@ -83,7 +84,8 @@
   article {
     @apply prose prose-neutral dark:prose-invert prose-img:mx-auto prose-img:my-auto max-w-full;
     @apply prose-headings:font-semibold;
-    @apply prose-headings:text-black dark:prose-headings:text-[#F6706B];
+    /*@apply prose-headings:text-black prose-a:underline-offset-2 dark:prose-headings:text-[var(--clr-accent)];*/
+    @apply prose-headings:text-black prose-a:underline-offset-2 dark:prose-headings:text-neutral-100;
   }
 }
 
@@ -122,6 +124,7 @@ pre {
 }
 
 :root {
+  --clr-accent: #f6706b;
   --astro-code-foreground: #09090b;
   --astro-code-background: #fafafa;
   --astro-code-token-comment: #a19595;

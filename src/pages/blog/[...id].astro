@@ -99,12 +99,18 @@ const { Content, headings } = await render(post);
     {headings.length > 0 && <TableOfContents headings={headings} />}
     <article class="animate">
       <Content />
-      <div class="mt-24">
-        <PostNavigation prevPost={prevPost} nextPost={nextPost} />
-      </div>
-      <div class="mt-24">
-        <Giscus />
-      </div>
+      <!--<div class="mt-24">-->
+      <!--  <PostNavigation prevPost={prevPost} nextPost={nextPost} />-->
+      <!--</div>-->
+      <!--<div class="mt-24">-->
+      <!--  <Giscus />-->
+      <!--</div>-->
     </article>
+    <div class="mt-24">
+      <PostNavigation prevPost={prevPost} nextPost={nextPost} />
+    </div>
+    <div class="mt-24">
+      <Giscus />
+    </div>
   </Container>
 </Layout>
