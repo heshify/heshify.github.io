@@ -8,7 +8,7 @@ tags:
 series: Building-Redoed
 ---
 
-## Redoed #4: Building the Document CRUD API
+Building Redoed: Writing the Document CRUD API
 
 Now that we have [a database connection](https://heshify.github.io/blog/redoed-database-connection), let's write the APIs to create, retrieve, update, and delete documents.
 
