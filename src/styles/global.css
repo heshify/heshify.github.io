@@ -94,6 +94,7 @@
     @apply font-sans text-current underline underline-offset-[3px];
     @apply decoration-black/30 dark:decoration-white/30;
     @apply transition-colors duration-300 ease-in-out;
+    @apply break-words;
   }
   article a:hover {
     @apply text-black dark:text-white;
